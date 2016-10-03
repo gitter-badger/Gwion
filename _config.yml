@@ -1,0 +1,40 @@
+# Setup
+title:        Gwion
+tagline:      A strongly timed musical programming language
+baseurl:      ""
+paginate:     1
+
+# About/contact
+author:
+  name:       Jérémie Astor
+  url:        https://fennecdjay.github.io/Gwion/
+
+# Gems
+github: [metadata]
+kramdown:
+  input: GFM
+  hard_wrap: false
+gems:
+  - jekyll-coffeescript
+  - jekyll-paginate
+
+
+#Others
+markdown: kramdown
+lsi:  false
+safe: true
+source: "./."
+incremental: false
+highlighter: rouge
+gist:
+  noscript: false
+kramdown:
+  math_engine: mathjax
+
+
+#deploy
+group: jekyll_plugins do
+  gem 'jekyll-deploy'
+
+deploy:
+- rsync -aze ssh   
