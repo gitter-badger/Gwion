@@ -1,7 +1,7 @@
 #!/bin/sh
 git clone -b gh-pages `git config remote.origin.url` _site
 mv README.md  README.old
-echo 'built by site/mk_size.sh' > README
+echo 'built by site/mk_size.sh' > README.md
 echo '_site' > .gitignore
 bundle exec jekyll b
 cd _site
