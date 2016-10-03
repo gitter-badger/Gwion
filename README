@@ -1,1 +1,2 @@
-built by site/mk_size.sh
+this is the branch where site is built.
+export it with 'sh mk_site.sh
