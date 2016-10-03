@@ -11,6 +11,7 @@ git push
 cd ..
 rm -rf _site
 mv README.old README.md
+rm Gemfile.lock
 git add -A
 git commit -am 'Yeah. Built from subdir'
 git push
