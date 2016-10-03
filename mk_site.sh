@@ -7,3 +7,4 @@ git add -A
 git commit -am 'Yeah. Built from subdir'
 git push
 cd ..
+rm -rf _site
