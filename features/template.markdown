@@ -2,6 +2,7 @@
 layout: default
 title:  "Template"
 date:   2016-10-12 17:50:00
+categories: features
 ---
 
 You can declare a template function:
