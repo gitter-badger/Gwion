@@ -7,7 +7,7 @@ function deploy()
 	mv README.md  README.old
 	echo 'built by site/mk_size.sh' > README.md
 	echo '_site' > .gitignore
-	bundle exec jekyll b --config _config.yml,_config_deploy.yml -q
+	bundle exec jekyll s --config _config.yml,_config_deploy.yml
 	cd _site
 	git add -A
 	git commit -am 'Yeah. Built from subdir'
