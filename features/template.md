@@ -27,3 +27,10 @@ function test() {
 {% highlight javascript %}
 {% include alert_msg.js %}
 {% endhighlight %}
+
+```ruby
+require 'tabbit'
+table = Tabbit.new('Name', 'Email')
+table.add_row('Tim Green', 'tiimgreen@gmail.com')
+puts table.to_s
+```
