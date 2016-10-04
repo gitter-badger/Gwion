@@ -12,41 +12,14 @@ author:
 # Gems
 github: [metadata]
 
-#kramdown:
-#  math_engine: mathjax
-#  input: GFM
-#  hard_wrap: false
-#  syntax_highlighter: rouge
 gems:
   - jekyll-gist
-#  - jekyll-coffeescript
   - jekyll-paginate
-#  - redcarpet
 gem: 'github-pages'
-#gem: 'rouge'
-#gem: 'redcarpet'
-#Others
 markdown: kramdown
-#markdown: redcarpet
-#lsi:  false
-#safe: true
-#source: "./."
 incremental: false
-#highlighter: pygments
-#highlighter: rouge
 gist:
   noscript: false
-
-
-#deploy
-#group: jekyll_plugins do
-#  gem 'jekyll-deploy'
-
-#deploy:
-#- rsync -aze ssh   
-#gem: "middleman-syntax"
-
-
 
 highlighter: rouge
 markdown: kramdown
@@ -57,3 +30,5 @@ kramdown:
   syntax_highlighter_opts:
     # Use existing pygments syntax highlighting css
     css_class: 'highlight'
+
+exclude: [Gemfile.lock, mk_site.sh]
