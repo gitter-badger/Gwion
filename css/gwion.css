@@ -260,7 +260,8 @@ background: linear-gradient(to left, #586573, #29323c); /* W3C, IE 10+/ Edge, Fi
   color: #FFFFFF70; }
 
 
-gist { padding: .3rem 1rem ; }
+.gist-file { border: 1rem !important; margin-top: 0rem !important;}
+.gist-data { border: 0rem !important; margin-top: 1rem !important;}
 
 .gist-meta {
 	display: none;
