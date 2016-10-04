@@ -74,7 +74,7 @@ a {
 
 
 .project-tagline {
-  margin-bottom: .2rem;
+  margin-bottom: .1rem;
   font-weight: normal;
   opacity: 0.7; }
   @media screen and (min-width: 64em) {
@@ -91,7 +91,7 @@ a {
     margin-top: 3rem; 
   word-wrap: break-word; }
   .main-content :first-child {
-    margin-top: 0rem; 
+    margin-top: 1rem; 
 }
   @media screen and (min-width: 64em) {
     .main-content {
