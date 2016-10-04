@@ -39,3 +39,5 @@ group: jekyll_plugins do
 
 deploy:
 - rsync -aze ssh   
+gem: "middleman-syntax"
+
