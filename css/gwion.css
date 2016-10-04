@@ -58,8 +58,8 @@ a {
 	width: 100%;
 
 background: #485563; /* fallback for old browsers */
-background: -webkit-linear-gradient(to left, #586573 , #29323c); /* Chrome 10-25, Safari 5.1-6 */
-background: linear-gradient(to left, #586573 , #29323c); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+background: -webkit-linear-gradient(to left, #586573, #29323c); /* Chrome 10-25, Safari 5.1-6 */
+background: linear-gradient(to left, #586573, #29323c); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
  
 	}
 }
@@ -249,14 +249,10 @@ background: linear-gradient(to left, #586573, #29323c); /* W3C, IE 10+/ Edge, Fi
       font-size: 0.5rem; } }
 
 .site-footer-owner {
-	margin-left: -12rem;
-  text-align: center;
   display: block;
   font-weight: bold; }
 
 .site-footer-credits {
-  text-align: center;
-	margin-left: 24rem;
   color: #FFFFFF70; }
 
 

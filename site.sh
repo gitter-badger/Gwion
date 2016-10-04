@@ -24,7 +24,7 @@ function deploy()
 #run the size locally. access with localhost:4000
 function run()
 {
-	bundle exec jekyll s -q
+	bundle exec jekyll s
 	rm -rf _site
 }
 
