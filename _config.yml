@@ -14,7 +14,7 @@ github: [metadata]
 kramdown:
   input: GFM
   hard_wrap: false
-syntax_highlighter: rouge
+	syntax_highlighter: rouge
 gems:
   - jekyll-coffeescript
   - jekyll-paginate
@@ -26,7 +26,7 @@ lsi:  false
 safe: true
 source: "./."
 incremental: false
-#highlighter: rouge
+highlighter: rouge
 gist:
   noscript: false
 kramdown:
