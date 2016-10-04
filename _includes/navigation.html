@@ -2,6 +2,7 @@
 
 <!-- This finds the current page so it can be highlighted. -->
 
+
 {% for entry in site.data.navigation %}
 {% capture fullurl %}{{ site.baseurl }}{{ entry.url }}{% endcapture %}
     {% if fullurl == page.url %}
@@ -14,6 +15,7 @@
 
 <!-- Then we build the nav bar. -->
 <nav>
+  <img src="{{ site.base_url }}/favicon.png" />
     <ul>
     {% for entry in site.data.navigation %}
         {% if entry.url == current_page %}

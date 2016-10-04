@@ -1,17 +1,6 @@
 ---
-layout: page
+layout: homepage
 title:  Features
 ---
-<br>
+
 This page is meant to server as a feature show.
-<p>
-<blockquotes>
-  <ul class="posts">
-    {% for post in site.pages %}
-      {% if post.categories == "features" %}
-        <li><span><a href="{{ site.baseurl }}{{ post.url }}">{{post.title}}</a></li>
-      {% endif %}
-    {% endfor %}
-  </ul>
-</blockquotes>
-</p>	
