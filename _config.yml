@@ -31,4 +31,4 @@ kramdown:
     # Use existing pygments syntax highlighting css
     css_class: 'highlight'
 
-exclude: [Gemfile.lock, mk_site.sh]
+exclude: [Gemfile.lock, mk_site.sh, .gitignore]
