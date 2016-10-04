@@ -246,3 +246,11 @@ a {
 
 .site-footer-credits {
   color: #1B1612; }
+
+
+gist { width: 250px !important}
+
+
+.gist-meta {
+	display: none;
+}

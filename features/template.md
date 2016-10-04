@@ -42,3 +42,8 @@ table.add_row('Tim Green', 'tiimgreen@gmail.com')
 puts table.to_s
 ~~~
 
+```ruby
+require 'redcarpet'
+markdown = Redcarpet.new("Hello World!")
+puts markdown.to_html
+```
