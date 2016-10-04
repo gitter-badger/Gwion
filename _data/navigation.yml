@@ -1,0 +1,20 @@
+# Belongs at: /_data/navigation.yml
+
+- title: Gwion
+  url: /
+
+- title: Abstract Syntaxic Tree
+  url: /
+  sublinks:
+    - title: Sections
+      url: /group/si1
+    - title: Class def
+      url: /group/si2
+    - title: Func Def
+      url: /group/si3
+
+- title: Plugins
+  url: /plugins
+
+- title: Features
+  url: /features

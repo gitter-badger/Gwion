@@ -1,7 +1,7 @@
 # Setup
 title:        Gwion
 tagline:      A strongly timed musical programming language
-baseurl:      "https://fennecdjay.github.io/Gwion/"
+#baseurl:      "https://fennecdjay.github.io/Gwion/"
 paginate:     1
 
 # About/contact
@@ -32,3 +32,6 @@ kramdown:
     css_class: 'highlight'
 
 exclude: [Gemfile.lock, mk_site.sh, .gitignore]
+
+nav_list:
+  Home: ['Home']
