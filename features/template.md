@@ -13,7 +13,13 @@ function ret_type function_names(argumens)
 	// your code here
 }	
 ```
+
 ```lua
+function test() {
+  console.log("notice the blank line before this function?");
+}
+```
+```ruby
 function test() {
   console.log("notice the blank line before this function?");
 }
