@@ -54,14 +54,13 @@ a {
 .page-header {
   color: #fff;
   text-align: center;
-  background-color: #000000;
 	margin: -2.3rem 0rem;	
 	width: 100%;
 
-background: #304352; /* fallback for old browsers */
-background: -webkit-linear-gradient(to left, #304352 , #d7d2cc); /* Chrome 10-25, Safari 5.1-6 */
-background: linear-gradient(to left, #304352 , #d7d2cc); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-     
+background: #485563; /* fallback for old browsers */
+background: -webkit-linear-gradient(to left, #586573 , #29323c); /* Chrome 10-25, Safari 5.1-6 */
+background: linear-gradient(to left, #586573 , #29323c); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+ 
 	}
 }
 .project-name {
@@ -185,8 +184,12 @@ background: linear-gradient(to left, #304352 , #d7d2cc); /* W3C, IE 10+/ Edge, F
     padding: 0 1rem;
     margin-left: 0;
     color: #303030;
-    background-color: transparent;
-	  background-image: linear-gradient(120deg, #2567A966, #25A96766); }
+
+
+background: #485563; /* fallback for old browsers */
+background: -webkit-linear-gradient(to left, #485563 , #29323c); /* Chrome 10-25, Safari 5.1-6 */
+background: linear-gradient(to left, #485563 , #29323c); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+        
     border-left: 0.3rem solid #dce6f0; }
     .main-content blockquote > :first-child {
       margin-top: 0; }
@@ -227,10 +230,10 @@ background: linear-gradient(to left, #304352 , #d7d2cc); /* W3C, IE 10+/ Edge, F
 	height: 10%;
 }
 .site-footer {
+background: #485563; /* fallback for old browsers */
+background: -webkit-linear-gradient(to left, #586573, #29323c); /* Chrome 10-25, Safari 5.1-6 */
+background: linear-gradient(to left, #586573, #29323c); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
 
-background: #304352; /* fallback for old browsers */
-background: -webkit-linear-gradient(to left, #304352 , #d7d2cc); /* Chrome 10-25, Safari 5.1-6 */
-background: linear-gradient(to left, #304352 , #d7d2cc); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
 	position: fixed; bottom: 0px; left: 0;
 	width: 100%;
 	margin-left: 12rem;
@@ -265,10 +268,10 @@ gist { padding: .3rem 1rem ; }
 
 nav {
 
-background: #304352; /* fallback for old browsers */
-background: -webkit-linear-gradient(to right, #304352 , #d7d2cc); /* Chrome 10-25, Safari 5.1-6 */
-background: linear-gradient(to right, #304352 , #d7d2cc); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 
-12+, Safari 7+ */
+background: #485563; /* fallback for old browsers */
+background: -webkit-linear-gradient(to right, #586573, #29323c); /* Chrome 10-25, Safari 5.1-6 */
+background: linear-gradient(to right, #586573, #29323c); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+ 
 	float: left;
 	color: white;
 	position: fixed;

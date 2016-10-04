@@ -1,15 +1,12 @@
-# Setup
 title:        Gwion
 tagline:      A strongly timed musical programming language
 baseurl:      "https://fennecdjay.github.io/Gwion/"
 paginate:     1
 
-# About/contact
 author:
   name:       Jérémie Astor
   url:        https://fennecdjay.github.io/Gwion/
 
-# Gems
 github: [metadata]
 
 gems:
@@ -23,14 +20,6 @@ gist:
 
 highlighter: rouge
 markdown: kramdown
-kramdown:
-  input: GFM
-  auto_ids: true
-  syntax_highlighter: rouge
-  syntax_highlighter_opts:
-    # Use existing pygments syntax highlighting css
-    css_class: 'highlight'
-
 exclude: [Gemfile.lock, mk_site.sh, .gitignore]
 
 nav_list:
