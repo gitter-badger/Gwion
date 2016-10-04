@@ -8,7 +8,7 @@ body {
   line-height: 1.5;
   color: #606c71; 
   background-color: #FFF; 
-  background-image: linear-gradient(120deg, #1558994D, #0F573366); }
+  background-image: linear-gradient(120deg, #1558994D, #434343); }
 }
 
 a {
@@ -54,10 +54,15 @@ a {
 .page-header {
   color: #fff;
   text-align: center;
-  background-color: #159957;
+  background-color: #000000;
 	margin: -2.3rem 0rem;	
 	width: 100%;
-  background-image: linear-gradient(120deg, #155799, #159957); }
+
+background: #304352; /* fallback for old browsers */
+background: -webkit-linear-gradient(to left, #304352 , #d7d2cc); /* Chrome 10-25, Safari 5.1-6 */
+background: linear-gradient(to left, #304352 , #d7d2cc); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+     
+	}
 }
 .project-name {
   margin-top: 0;
@@ -99,7 +104,7 @@ a {
       font-size: 1.1rem; } }
   @media screen and (min-width: 42em) and (max-width: 64em) {
     .main-content {
-      padding: 2rem 12rem;
+      padding: 2rem 2rem;
       font-size: 1.1rem; } }
   @media screen and (max-width: 42em) {
     .main-content {
@@ -120,7 +125,7 @@ a {
   .main-content p {
     margin-bottom: 1em; }
   .main-content code {
-    padding: 2px 4px;
+    padding: 2px 2px;
     font-family: Consolas, "Liberation Mono", Menlo, Courier, monospace;
     font-size: 0.9rem;
     color: #567482;
@@ -218,13 +223,17 @@ a {
     border: 0; }
 
 .footer {
+  text-align: center;
 	height: 10%;
 }
 .site-footer {
+
+background: #304352; /* fallback for old browsers */
+background: -webkit-linear-gradient(to left, #304352 , #d7d2cc); /* Chrome 10-25, Safari 5.1-6 */
+background: linear-gradient(to left, #304352 , #d7d2cc); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
 	position: fixed; bottom: 0px; left: 0;
 	width: 100%;
-	background-color: #159957;
-  background-image: linear-gradient(120deg, #155799, #159957); 
+	margin-left: 12rem;
 	font-size: .5rem; }
  @media screen and (min-width: 64em) {
     .site-footer {
@@ -237,26 +246,31 @@ a {
       font-size: 0.5rem; } }
 
 .site-footer-owner {
+	margin-left: -12rem;
+  text-align: center;
   display: block;
   font-weight: bold; }
 
 .site-footer-credits {
-  color: #1B1612; }
+  text-align: center;
+	margin-left: 24rem;
+  color: #FFFFFF70; }
 
 
-gist { padding: 0rem 4rem ; }
-
+gist { padding: .3rem 1rem ; }
 
 .gist-meta {
 	display: none;
 }
 
 nav {
+
+background: #304352; /* fallback for old browsers */
+background: -webkit-linear-gradient(to right, #304352 , #d7d2cc); /* Chrome 10-25, Safari 5.1-6 */
+background: linear-gradient(to right, #304352 , #d7d2cc); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 
+12+, Safari 7+ */
 	float: left;
-	background-color: #daa52066;
-  border-width: 5px;
-  border-right: 12px;
-  border-color: #000000;
+	color: white;
 	position: fixed;
 	left: 0;
 	top: 0;
