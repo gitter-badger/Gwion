@@ -13,7 +13,7 @@ gems:
   - jekyll-paginate
 gem: 'github-pages'
 markdown: kramdown
-incremental: false
+incremental: true
 gist:
   noscript: false
 
