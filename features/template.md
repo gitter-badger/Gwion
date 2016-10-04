@@ -24,3 +24,6 @@ function test() {
   console.log("notice the blank line before this function?");
 }
 ```
+{% highlight javascript %}
+{% include alert_msg.js %}
+{% endhighlight %}
