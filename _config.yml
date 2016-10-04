@@ -1,7 +1,7 @@
 # Setup
 title:        Gwion
 tagline:      A strongly timed musical programming language
-baseurl:      "https://fennecdjay.github.io/Gwion/"
+#baseurl:      "https://fennecdjay.github.io/Gwion/"
 paginate:     1
 
 # About/contact
@@ -20,15 +20,19 @@ kramdown:
 gems:
   - jekyll-coffeescript
   - jekyll-paginate
-
-gem:: 'github-pages'
+  - redcarpet
+gem: 'github-pages'
+gem: 'rouge'
+gem: 'redcarpet'
 #Others
-markdown: kramdown
+#markdown: kramdown
+markdown: redcarpet
 lsi:  false
 safe: true
 source: "./."
 incremental: false
-highlighter: rouge
+#highlighter: pygments
+#highlighter: rouge
 gist:
   noscript: false
 
