@@ -21,4 +21,4 @@ highlighter: rouge
 
 exclude: [Gemfile.lock, mk_site.sh, .gitignore]
 
-base_url: fennecdjay.github.io/Gwion
+base_url: https://fennecdjay.github.io/Gwion
