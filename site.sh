@@ -4,6 +4,11 @@
 function deploy()
 {
 	git clone -b gh-pages `git config remote.origin.url` _site
+	cd _site
+	git rm -r *
+	git commit -m "auto clean"
+	git push
+	cd ..
 	mv README.md  README.old
 	echo 'built by site/mk_size.sh' > README.md
 	echo '_site' > .gitignore
