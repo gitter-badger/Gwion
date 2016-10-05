@@ -272,6 +272,7 @@ background: linear-gradient(to right, #586573, #29323c); /* W3C, IE 10+/ Edge, F
 	top: 0;
 	width: 8rem;
 	height: 100%;
+	font-size: .8rem;
 }
 html {
     height:100%;

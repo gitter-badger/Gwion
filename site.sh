@@ -24,6 +24,7 @@ function deploy()
 	mv README.md  README.old
 	echo 'built by site/mk_size.sh' > README.md
 	echo '_site' > .gitignore
+	sed -i '/base/s/^#//g' _config.yml #uncomment
 	bundle exec jekyll b
 	cd _site
 	git add -A
@@ -33,6 +34,7 @@ function deploy()
 	rm -rf _site
 	mv README.old README.md
 	rm Gemfile.lock
+	sed -i '/baseurl/s/^/#/g' _config.yml #comment
 	git add -A
 	git commit -am 'Yeah. Built from subdir'
 	git push > /dev/null
@@ -41,7 +43,9 @@ function deploy()
 #run the size locally. access with localhost:4000
 function run()
 {
+	sed -i '/baseurl/s/^/#/g' _config.yml #comment
 	bundle exec jekyll s
+	sed -i '/base/s/^#//g' _config.yml #uncomment
 	rm -rf _site
 }
 

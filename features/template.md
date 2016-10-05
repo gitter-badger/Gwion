@@ -19,6 +19,14 @@ function test() {
   console.log("notice the blank line before this function?");
 }
 ```
+
+```gwion
+adc void
+function test() {
+  console.log("notice the blank line before this function?");
+}
+```
+
 ```ruby
 function test() {
   console.log("notice the blank line before this function?");
