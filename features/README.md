@@ -1,5 +1,5 @@
 ---
-layout: default
+layout: example
 title:  "Function Pointers"
 categories: features
 ---

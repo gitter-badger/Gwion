@@ -1,7 +1,6 @@
 title:        Gwion
 tagline:      A strongly timed musical programming language
 paginate:     1
-#base_url:			https://fennecdjay.github.io/Gwion/
 author:
   name:       Jérémie Astor
   url:        https://fennecdjay.github.io/Gwion/
@@ -13,7 +12,7 @@ gems:
   - jekyll-paginate
 gem: 'github-pages'
 markdown: kramdown
-incremental: true
+incremental: false
 
 gist:
   noscript: false
@@ -21,6 +20,3 @@ gist:
 highlighter: rouge
 
 exclude: [Gemfile.lock, mk_site.sh, .gitignore]
-
-nav_list:
-  Home: ['Home']

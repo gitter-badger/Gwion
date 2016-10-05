@@ -12,7 +12,7 @@ function deploy()
 	mv README.md  README.old
 	echo 'built by site/mk_size.sh' > README.md
 	echo '_site' > .gitignore
-	bundle exec jekyll b --config _config.yml,_config_deploy.yml
+	bundle exec jekyll b
 	cd _site
 	git add -A
 	git commit -am 'Yeah. Built from subdir'
@@ -29,7 +29,7 @@ function deploy()
 #run the size locally. access with localhost:4000
 function run()
 {
-	bundle exec jekyll s --config _config.yml
+	bundle exec jekyll s
 	rm -rf _site
 }
 
@@ -46,12 +46,32 @@ function send_gist()
 
 function examples()
 {
-	echo "find the examples modules"
-	echo "'cd' in int"
-	echo "iterative loop trough '.gw' files in dir"
-	echo "make headers"
-	echo -e "---\nlayout:example\,title:'example name'\n---"
-	pygmentize -f html /tmp/file.gw
+	rm -rf examples Gwion-examples
+	git checkout master -- examples
+	mv examples Gwion-examples
+	mkdir examples
+	for ex in $(ls Gwion-examples/*.gw)
+	do
+		NAME=$(basename $ex .gw)
+		echo -e "---\nlayout: example\ntitle: example $NAME\ncategories: examples \n---\n<br>this page documents <b>$NAME.gw</b><br><p>" > examples/$NAME.html
+		pygmentize -f html $ex >> examples/$NAME.html
+	echo "</p>" >> examples/$NAME.html
+	done
+	echo '---
+layout: homepage
+title:	{{post.title}}
+---
+  <h1>Examples</h1>
+  <ul class="posts">
+{% for post in site.pages %}
+	{% if post.categories == "examples" %}
+		<li><span><a href="{{ site.baseurl }}{{ post.url }}">{{post.title}}</a></li>
+	{% endif %}
+{% endfor %}
+  </ul>' > examples/index.html
+
+
+	rm -r Gwion-examples
 	echo "put example content, whith highligting"
 	echo "you should be done."
 }

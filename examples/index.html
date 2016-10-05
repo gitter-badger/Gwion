@@ -2,10 +2,10 @@
 layout: page
 title:	{{post.title}}
 ---
-  <h1>Features</h1>
+  <h1>Examples</h1>
   <ul class="posts">
 {% for post in site.pages %}
-	{% if post.categories == "features" %}
+	{% if post.categories == "examples" %}
 		<li><span><a href="{{ site.baseurl }}{{ post.url }}">{{post.title}}</a></li>
 	{% endif %}
 {% endfor %}
