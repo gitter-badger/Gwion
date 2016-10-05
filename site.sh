@@ -1,6 +1,18 @@
 #!/bin/sh
-
 # deploy site on gh-pages
+
+function post()
+{
+	if [ ls -d */ | grep "$1" ]
+	then
+		echo "first arg must be a directory"
+		return
+	fi
+	echo -e "---\nlayout:     page\ntitle:      $2" > $1/$2.html
+	echo -e "categories: $1\n---\n" >> $1/$2.html
+	nano $1/$2.html
+}
+
 function deploy()
 {
 	git clone -b gh-pages `git config remote.origin.url` _site
@@ -87,7 +99,6 @@ function code()
 }
 
 # parse arguments
-echo $1
 if [ "${1}" = 'run' ]
 then
 	run
@@ -102,9 +113,7 @@ then
 	code
 elif [ "${1}" = 'examples' ]
 then
-#	echo "$1:not ready yet."
-#	exit 1
 	examples
 else
-	echo "$0 needs 'run' or 'deploy' as argument"
+	post $1 $2
 fi
