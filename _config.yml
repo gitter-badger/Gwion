@@ -14,11 +14,12 @@ gems:
 gem: 'github-pages'
 markdown: kramdown
 incremental: true
+
 gist:
   noscript: false
 
 highlighter: rouge
-markdown: kramdown
+
 exclude: [Gemfile.lock, mk_site.sh, .gitignore]
 
 nav_list:

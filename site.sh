@@ -39,6 +39,28 @@ function send_gist()
 	echo $(gist -u $1 -f $2| sed "s/https:\/\/gist.github.com\///") >> known_gist
 }
 
+function examples()
+{
+	echo "find the examples modules"
+	echo "'cd' in int"
+	echo "iterative loop trough '.gw' files in dir"
+	echo "make headers"
+	echo -e "---\nlayout:example\,title:'example name'\n---"
+	pygmentize -f html /tmp/file.gw
+	echo "put example content, whith highligting"
+	echo "you should be done."
+}
+
+function code()
+{
+	rm -f /tmp/file.gw
+	nano /tmp/file.gw
+	pygmentize -f html /tmp/file.gw | xclip -i
+	echo "should be"
+	pygmentize /tmp/file.gw
+	rm -f /tmp/file.gw
+}
+
 # parse arguments
 echo $1
 if [ "${1}" = 'run' ]
@@ -50,6 +72,14 @@ then
 elif [ "${1}" = 'deploy' ]
 then
 	deploy
+elif [ "${1}" = 'code' ]
+then
+	code
+elif [ "${1}" = 'examples' ]
+then
+#	echo "$1:not ready yet."
+#	exit 1
+	examples
 else
 	echo "$0 needs 'run' or 'deploy' as argument"
 fi

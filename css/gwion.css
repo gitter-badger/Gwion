@@ -19,13 +19,13 @@ a {
 
 .btn {
   display: inline-block;
-  margin-bottom: 1rem;
   color: rgba(255, 255, 255, 0.7);
   background-color: rgba(255, 255, 255, 0.08);
   border-color: rgba(255, 255, 255, 0.2);
   border-style: solid;
   border-width: 1px;
   border-radius: 0.3rem;
+  margin-bottom: .5rem;
   transition: color 0.2s, background-color 0.2s, border-color 0.2s; }
   .btn:hover {
     color: rgba(255, 255, 255, 0.8);
@@ -94,7 +94,7 @@ background: linear-gradient(to left, #586573, #29323c); /* W3C, IE 10+/ Edge, Fi
 .main-content {
   word-wrap: break-word; }
   .main-content :first-child {
-    margin-top: 2rem; 
+    margin: 0rem 0; 
 }
   @media screen and (min-width: 64em) {
     .main-content {
@@ -118,7 +118,7 @@ width: 100%;
   .main-content h4,
   .main-content h5,
   .main-content h6 {
-    margin-top: 2rem;
+    margin-top: .2rem;
     margin-bottom: 1rem;
     font-weight: normal;
     color: #159957; }
@@ -151,13 +151,14 @@ width: 100%;
       background: transparent;
       border: 0; }
   .main-content .highlight {
-    margin-bottom: 1rem; }
+    padding: 2rem 2rem !important;
+		margin-bottom: 0rem; }
     .main-content .highlight pre {
       margin-bottom: 0;
       word-break: normal; }
   .main-content .highlight pre,
   .main-content pre {
-    padding: 0.8rem;
+    padding: 0rem;
     overflow: auto;
     font-size: 0.9rem;
     line-height: 1.45;
@@ -182,7 +183,7 @@ width: 100%;
   .main-content ol {
     margin-top: 0; }
   .main-content blockquote {
-    padding: 0 1rem;
+    padding: 0 0rem;
     margin-left: 0;
     color: #303030;
 
@@ -281,4 +282,8 @@ background: linear-gradient(to right, #586573, #29323c); /* W3C, IE 10+/ Edge, F
 }
 html {
     height:100%;
+}
+
+.topline {
+	margin-top:3rem !important;
 }

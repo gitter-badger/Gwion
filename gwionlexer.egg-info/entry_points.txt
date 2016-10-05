@@ -1,0 +1,4 @@
+
+  [pygments.lexers]
+  gwionlexer = gwionlexer.lexer:GwionLexer
+  

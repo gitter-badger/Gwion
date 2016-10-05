@@ -1,0 +1,8 @@
+setup.py
+GwionLexer/__init__.py
+GwionLexer/lexer.py
+gwionlexer.egg-info/PKG-INFO
+gwionlexer.egg-info/SOURCES.txt
+gwionlexer.egg-info/dependency_links.txt
+gwionlexer.egg-info/entry_points.txt
+gwionlexer.egg-info/top_level.txt
