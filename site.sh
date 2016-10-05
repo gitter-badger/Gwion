@@ -5,7 +5,7 @@ function post()
 {
 	if [ ls -d */ | grep "$1" ]
 	then
-		echo "first arg must be a directory"
+		echo "first arg must be a directory, or 'run' or 'deploy'"
 		return
 	fi
 	echo -e "---\nlayout:     page\ntitle:      $2" > $1/$2.html
@@ -13,7 +13,7 @@ function post()
 	nano $1/$2.html
 }
 
-function deploy2()
+function deploy()
 {
 	# first  build the site
 	sed -i '/base/s/^/#/g' _config.yml #uncomment
@@ -30,33 +30,33 @@ function deploy2()
 	git push
 }
 
-function deploy()
-{
-	git clone -b gh-pages `git config remote.origin.url` _site
-	cd _site
-	git rm -r *
-	git commit -m "auto clean"
-	git push
-	cd ..
-	mv README.md  README.old
-	echo 'built by site/mk_size.sh' > README.md
-	echo '_site' > .gitignore
-	sed -i '/base/s/^/#/g' _config.yml #uncomment
-	nano _config.yml
-	bundle exec jekyll b
-	cd _site
-	git add -A
-	git commit -am 'Yeah. Built from subdir'
-	git push
-	cd ..
-	rm -rf _site
-	mv README.old README.md
-	rm Gemfile.lock
-	sed -i '/baseurl/s/^#//g' _config.yml #comment
-	git add -A
-	git commit -am 'Yeah. Built from subdir'
-	git push > /dev/null
-}
+#function deploy()
+#{
+#	git clone -b gh-pages `git config remote.origin.url` _site
+#	cd _site
+#	git rm -r *
+#	git commit -m "auto clean"
+#	git push
+#	cd ..
+#	mv README.md  README.old
+#	echo 'built by site/mk_size.sh' > README.md
+#	echo '_site' > .gitignore
+#	sed -i '/base/s/^/#/g' _config.yml #uncomment
+#	nano _config.yml
+#	bundle exec jekyll b
+#	cd _site
+#	git add -A
+#	git commit -am 'Yeah. Built from subdir'
+#	git push
+#	cd ..
+#{	rm -rf _site
+#mv README.old README.md
+#	rm Gemfile.lock
+#	sed -i '/baseurl/s/^#//g' _config.yml #comment
+#	git add -A
+#	git commit -am 'Yeah. Built from subdir'
+#	git push > /dev/null
+#}
 
 #run the size locally. access with localhost:4000
 function run()
@@ -130,9 +130,6 @@ then
 elif [ "${1}" = 'deploy' ]
 then
 	deploy
-elif [ "${1}" = 'deploy2' ]
-then
-	deploy2
 elif [ "${1}" = 'code' ]
 then
 	code
