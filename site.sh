@@ -13,6 +13,23 @@ function post()
 	nano $1/$2.html
 }
 
+function deploy2()
+{
+	# first  build the site
+	sed -i '/base/s/^/#/g' _config.yml #uncomment
+	nano _config.yml
+	bundle exec jekyll b
+	# check gh-pages
+	git checkout gh-pages
+	git rm -rf *
+	git checkout site -- _site
+	mv site/* .
+	rmdir _site
+	git add .
+	git commit -am 'Yeah. Built from subdir'
+	git push
+}
+
 function deploy()
 {
 	git clone -b gh-pages `git config remote.origin.url` _site
@@ -113,6 +130,9 @@ then
 elif [ "${1}" = 'deploy' ]
 then
 	deploy
+elif [ "${1}" = 'deploy2' ]
+then
+	deploy2
 elif [ "${1}" = 'code' ]
 then
 	code
