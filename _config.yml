@@ -1,7 +1,7 @@
 title:        Gwion
 tagline:      A strongly timed musical programming language
 paginate:     1
-
+base_url:			https://fennecdjay.github.io/Gwion/
 author:
   name:       Jérémie Astor
   url:        https://fennecdjay.github.io/Gwion/
