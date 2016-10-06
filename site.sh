@@ -28,7 +28,7 @@ function deploy()
 	git add .
 	git commit -am 'Yeah. Built from subdir'
 	git push
-	cd ..
+	git checkout site
 	rm -rf _site
 	git add .
 	git commit -am 'Yeah. built by script'
