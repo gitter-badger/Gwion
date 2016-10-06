@@ -18,11 +18,8 @@ function deploy()
 	git add .
 	git commit -am 'Yeah. Built from subdir'
 	git push
-	# first  build the site
-#	sed -i '/base/s/^/#/g' _config.yml #uncomment
 	bundle exec jekyll b
 	mv _site /tmp
-	# check gh-pages
 	git checkout gh-pages
 	git rm -rf *
 	mv /tmp/_site/* .
@@ -31,44 +28,12 @@ function deploy()
 	git commit -am 'Yeah. Built from subdir'
 	git push
 	git checkout site
-#	rm -rf _site
-#	git add .
-#	git commit -am 'Yeah. built by script'
-#	git push
 }
-
-#function deploy()
-#{
-#	git clone -b gh-pages `git config remote.origin.url` _site
-#	cd _site
-#	git rm -r *
-#	git commit -m "auto clean"
-#	git push
-#	cd ..
-#	mv README.md  README.old
-#	echo 'built by site/mk_size.sh' > README.md
-#	echo '_site' > .gitignore
-#	sed -i '/base/s/^/#/g' _config.yml #uncomment
-#	nano _config.yml
-#	bundle exec jekyll b
-#	cd _site
-#	git add -A
-#	git commit -am 'Yeah. Built from subdir'
-#	git push
-#	cd ..
-#{	rm -rf _site
-#mv README.old README.md
-#	rm Gemfile.lock
-#	sed -i '/baseurl/s/^#//g' _config.yml #comment
-#	git add -A
-#	git commit -am 'Yeah. Built from subdir'
-#	git push > /dev/null
-#}
 
 #run the size locally. access with localhost:4000
 function run()
 {
-	sed -i '/baseurl/s/^/#/g' _config.yml #comment
+	sed -i '/base/s/^/#/g' _config.yml #comment
 	bundle exec jekyll s
 	sed -i '/base/s/^#//g' _config.yml #uncomment
 	rm -rf _site
