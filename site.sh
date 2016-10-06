@@ -24,7 +24,7 @@ function deploy()
 	git rm -rf *
 	git checkout site -- _site
 	mv site/* .
-	rmdir _site
+	rm -rf _site
 	git add .
 	git commit -am 'Yeah. Built from subdir'
 	git push
