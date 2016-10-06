@@ -1,0 +1,13 @@
+---
+layout: page
+title:	{{post.title}}
+---
+  <h1>Ast</h1>
+the abstract syntaxic tree
+  <ul class="posts">
+{% for post in site.pages %}
+	{% if post.categories == "ast" %}
+		<li><span><a href="{{ site.baseurl }}{{ post.url }}">{{post.title}}</a></li>
+	{% endif %}
+{% endfor %}
+  </ul>
