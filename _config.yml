@@ -19,7 +19,7 @@ gist:
 
 highlighter: rouge
 
-exclude: [Gemfile.lock, site.sh, .gitignore, README.old]
+exclude: [Gemfile.lock, site.sh, .gitignore, README.md, .help.zsh]
 
 baseurl: https://fennecdjay.github.io/Gwion
 base-url: https://fennecdjay.github.io/Gwion
