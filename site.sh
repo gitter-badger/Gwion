@@ -23,10 +23,15 @@ function deploy()
 	git checkout gh-pages
 	git rm -rf *
 	git checkout site -- _site
-	mv site/* .
-	rm -rf _site
+	mv _site/* .
+	rmdir _site
 	git add .
 	git commit -am 'Yeah. Built from subdir'
+	git push
+	cd ..
+	rm -rf _site
+	git add .
+	git commit -am 'Yeah. built by script'
 	git push
 }
 
