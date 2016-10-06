@@ -16,23 +16,19 @@ function post()
 function deploy()
 {
 	# first  build the site
-	sed -i '/base/s/^/#/g' _config.yml #uncomment
-	nano _config.yml
+	sed -i '/base/s/^#//g' _config.yml #uncomment
 	bundle exec jekyll b
 	# check gh-pages
+	mv _site /tmp
 	git checkout gh-pages
-	git rm -rf *
-	git checkout site -- _site
 	mv _site/* .
-	rmdir _site
 	git add .
 	git commit -am 'Yeah. Built from subdir'
 	git push
 	git checkout site
-	rm -rf _site
-	git add .
-	git commit -am 'Yeah. built by script'
-	git push
+#	git add .
+#	git commit -am 'Yeah. built by script'
+#	git push
 }
 
 #function deploy()
