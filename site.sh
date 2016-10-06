@@ -22,7 +22,7 @@ function deploy()
 	mv _site /tmp
 	git checkout gh-pages
 	git rm -rf *
-	mv _site/* .
+	mv /tmp/_site/* .
 	git add .
 	git commit -am 'Yeah. Built from subdir'
 	git push

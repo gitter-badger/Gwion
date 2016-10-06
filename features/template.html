@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+
+<html lang="en-us">
+  <head>
+  <meta charset="UTF-8">
+  <title>Gwion</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#157878">
+  <link rel="stylesheet" href="https://fennecdjay.github.io/Gwion/css/normalize.css">
+  <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,700' rel='stylesheet' type='text/css'>
+  <link rel="stylesheet" href="https://fennecdjay.github.io/Gwion/css/gwion.css">
+	<link href="https://fennecdjay.github.io/Gwion/css/syntax.css" rel="stylesheet">
+	<link rel="shortcut icon" type="image/png" href="https://fennecdjay.github.io/Gwion/favicon.png"/>
+</head>
+
+  <section class="page-header">
+  <h1 class="project-name">Gwion</h1>
+  <h2 class="project-tagline">A strongly timed musical programming language</h2>
+</section>
+
+  <body>
+		<!-- Belongs at: /_includes/navigation.html -->
+
+<!-- This finds the current page so it can be highlighted. -->
+
+
+
+
+    
+
+
+    
+
+
+    
+
+
+    
+
+
+    
+
+
+<!-- Then we build the nav bar. -->
+<nav>
+  <img src="https://fennecdjay.github.io/Gwion/favicon.png"/>
+    <ul>
+    
+        
+            <!-- We have to declare it 'null' to ensure it doesn't propagate. -->
+            
+        
+        
+        
+        <li><a href="https://fennecdjay.github.io/Gwion/">Gwion</a></li>
+        
+    
+        
+            <!-- We have to declare it 'null' to ensure it doesn't propagate. -->
+            
+        
+        
+        
+        <li><a href="https://fennecdjay.github.io/Gwion/ast">AST</a></li>
+        
+    
+        
+            <!-- We have to declare it 'null' to ensure it doesn't propagate. -->
+            
+        
+        
+        
+        <li><a href="https://fennecdjay.github.io/Gwion/plugins">Plugins</a></li>
+        
+    
+        
+            <!-- We have to declare it 'null' to ensure it doesn't propagate. -->
+            
+        
+        
+        
+        <li><a href="https://fennecdjay.github.io/Gwion/features">Features</a></li>
+        
+    
+        
+            <!-- We have to declare it 'null' to ensure it doesn't propagate. -->
+            
+        
+        
+        
+        <li><a href="https://fennecdjay.github.io/Gwion/examples">Examples</a></li>
+        
+    
+    </ul>
+</nav>
+
+    <section class="main-content">
+      <p>You can declare a template function:</p>
+
+<div class="language-c highlighter-rouge"><pre class="highlight"><code><span class="n">template</span><span class="o">&lt;</span><span class="p">{</span><span class="n">your</span> <span class="n">typenames</span><span class="p">}</span><span class="o">&gt;</span>
+<span class="n">function</span> <span class="n">ret_type</span> <span class="n">function_names</span><span class="p">(</span><span class="n">argumens</span><span class="p">)</span>
+<span class="p">{</span>
+	<span class="c1">// your code here
+</span><span class="p">}</span>	
+</code></pre>
+</div>
+
+<div class="language-lua highlighter-rouge"><pre class="highlight"><code><span class="k">function</span> <span class="nf">test</span><span class="p">()</span> <span class="p">{</span>
+  <span class="n">console</span><span class="p">.</span><span class="n">log</span><span class="p">(</span><span class="s2">"notice the blank line before this function?"</span><span class="p">);</span>
+<span class="p">}</span>
+</code></pre>
+</div>
+
+<pre><code class="language-gwion">adc void
+function test() {
+  console.log("notice the blank line before this function?");
+}
+</code></pre>
+
+<div class="language-ruby highlighter-rouge"><pre class="highlight"><code><span class="n">function</span> <span class="nb">test</span><span class="p">()</span> <span class="p">{</span>
+  <span class="n">console</span><span class="p">.</span><span class="nf">log</span><span class="p">(</span><span class="s2">"notice the blank line before this function?"</span><span class="p">);</span>
+<span class="p">}</span>
+</code></pre>
+</div>
+
+<figure class="highlight"><pre><code class="language-javascript" data-lang="javascript"><span class="nx">alert</span><span class="p">(</span><span class="s2">"hello world"</span><span class="p">);</span></code></pre></figure>
+
+<div class="language-ruby highlighter-rouge"><pre class="highlight"><code><span class="nb">require</span> <span class="s1">'tabbit'</span>
+<span class="n">table</span> <span class="o">=</span> <span class="no">Tabbit</span><span class="p">.</span><span class="nf">new</span><span class="p">(</span><span class="s1">'Name'</span><span class="p">,</span> <span class="s1">'Email'</span><span class="p">)</span>
+<span class="n">table</span><span class="p">.</span><span class="nf">add_row</span><span class="p">(</span><span class="s1">'Tim Green'</span><span class="p">,</span> <span class="s1">'tiimgreen@gmail.com'</span><span class="p">)</span>
+<span class="nb">puts</span> <span class="n">table</span><span class="p">.</span><span class="nf">to_s</span>
+</code></pre>
+</div>
+
+<div class="language-ruby highlighter-rouge"><pre class="highlight"><code><span class="nb">require</span> <span class="s1">'tabbit'</span>
+<span class="n">table</span> <span class="o">=</span> <span class="no">Tabbit</span><span class="p">.</span><span class="nf">new</span><span class="p">(</span><span class="s1">'Name'</span><span class="p">,</span> <span class="s1">'Email'</span><span class="p">)</span>
+<span class="n">table</span><span class="p">.</span><span class="nf">add_row</span><span class="p">(</span><span class="s1">'Tim Green'</span><span class="p">,</span> <span class="s1">'tiimgreen@gmail.com'</span><span class="p">)</span>
+<span class="nb">puts</span> <span class="n">table</span><span class="p">.</span><span class="nf">to_s</span>
+</code></pre>
+</div>
+
+<div class="language-ruby highlighter-rouge"><pre class="highlight"><code><span class="nb">require</span> <span class="s1">'redcarpet'</span>
+<span class="n">markdown</span> <span class="o">=</span> <span class="no">Redcarpet</span><span class="p">.</span><span class="nf">new</span><span class="p">(</span><span class="s2">"Hello World!"</span><span class="p">)</span>
+<span class="nb">puts</span> <span class="n">markdown</span><span class="p">.</span><span class="nf">to_html</span>
+</code></pre>
+</div>
+
+    </section>
+    <footer class="site-footer">
+  <span class="site-footer-owner"><a href="">Gwion</a> is maintained by <a href="https://fennecdjay.github.io/Gwion/">Jérémie Astor</a>.</span>
+  <span class="site-footer-credits">This page was generated by <a href="https://pages.github.com">GitHub Pages</a>.</span>
+</footer>
+
+<nav>
