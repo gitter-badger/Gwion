@@ -22,6 +22,7 @@ function deploy()
 	mv _site /tmp
 	git checkout gh-pages
 	git rm -rf *
+	rm -rf *
 	mv /tmp/_site/* .
 	rmdir /tmp/_site
 	git add .
