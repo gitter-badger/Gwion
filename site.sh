@@ -30,13 +30,17 @@ function deploy()
 	git checkout site
 }
 
+on_int()
+{
+	sed -i '/base/s/^#//g' _config.yml #uncomment
+	rm -rf _site
+}
 #run the size locally. access with localhost:4000
 function run()
 {
+	trap on_int INT
 	sed -i '/base/s/^/#/g' _config.yml #comment
 	bundle exec jekyll s
-	sed -i '/base/s/^#//g' _config.yml #uncomment
-	rm -rf _site
 }
 
 # remove _site if interupted or ...
