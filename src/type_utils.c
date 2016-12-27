@@ -102,6 +102,13 @@ Type type_copy(Env env, Type type)
   return a;
 }
 
+void free_Type(Type a)
+{
+  if(a->info)
+    free(a->info);
+  free(a);
+}
+
 Type find_type(Env env, ID_List path)
 {
   S_Symbol xid = NULL;
