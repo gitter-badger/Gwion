@@ -152,7 +152,7 @@ void free_NameSpace(NameSpace a)
   v = scope_get(a->type);
   for(i = 0; i < vector_size(v); i++) {
     Type type = (Type)vector_at(v, i);
-
+/*
     if(type->info) {
       free_Operator_Map(type->info->operator);
       free_Vector(type->info->obj_v_table);
@@ -196,6 +196,7 @@ void free_NameSpace(NameSpace a)
 //	free(type->info->class_data);
       free(type->info);
     }
+*/
     rem_ref(type->obj, type); // no op for now
   }
   free_Vector(v);

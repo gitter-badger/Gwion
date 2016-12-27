@@ -40,7 +40,7 @@ void rem_ref(VM_Object a, void* ptr)
       free_Env(ptr);
       break;
     case e_type_obj:
-//        goto error;
+      free_Type(ptr);
       break;
     case e_value_obj:
       free_Value(ptr);
